@@ -43,10 +43,6 @@ The system follows a microservices design pattern with two communication paradig
 - **User interface:** Telegram Bot API
 - **Storage:** Time-series database
 
-## Getting Started
-
-> Add setup/run instructions specific to your implementation here (dependencies, environment variables, how to start each microservice, broker configuration, etc.).
-
 ## Team
 
 - Mohamad Abdallah
