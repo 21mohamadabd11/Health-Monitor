@@ -1,0 +1,11 @@
+{
+    "patients": {
+    },
+    "devices": {
+    },
+    "services": [
+    ],
+    "doctors":{
+    },
+    "catalog_url": "catalog:8080"
+}

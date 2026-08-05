@@ -1,0 +1,9 @@
+{
+    "catalogURL": "http://catalog:8080",
+    "serviceInfo": {
+        "id": 2,
+        "serviceName": "StatisticProvider",
+        "last_update": "",
+        "url": "http://sp:7070"
+    }
+}

@@ -1,0 +1,10 @@
+requests
+paho-mqtt==1.6.1
+Flask
+cherrypy
+telepot
+pytz
+fpdf
+matplotlib
+numpy
+scipy

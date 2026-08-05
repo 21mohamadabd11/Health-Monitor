@@ -1,0 +1,109 @@
+#version: "3.9"
+
+services:
+  catalog:
+    build: ./catalog   # path to your catalog Dockerfile
+    container_name: catalog
+    ports:
+      - "8080:8080"    # expose to host if you want to test with browser
+    networks:
+      - iot
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  tsa:
+    build: ./ThingSpeakAdaptor   # path to your adaptor Dockerfile
+    container_name: tsa
+    networks:
+      - iot
+    depends_on:
+      - catalog
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  tcon:
+    build: ./TimerControl   # path to your adaptor Dockerfile
+    container_name: tcon
+    networks:
+      - iot
+    depends_on:
+      - catalog
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  sp:
+      build: ./StatisticProvider   # path to your adaptor Dockerfile
+      container_name: sp
+      networks:
+        - iot
+      depends_on:
+        - catalog
+        - tsa
+      environment:
+      - PYTHONUNBUFFERED=1
+    
+  mainbot:
+    build: ./mainbot   # path to your adaptor Dockerfile
+    container_name: mainbot
+    networks:
+      - iot
+    depends_on:
+      - catalog
+      - sp
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  health_con:
+    build: ./healthConnector   # path to your adaptor Dockerfile
+    container_name: health_con
+    networks:
+      - iot
+    depends_on:
+      - catalog
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  house_con:
+    build: ./houseConnector   # path to your adaptor Dockerfile
+    container_name: house_con
+    networks:
+      - iot
+    depends_on:
+      - catalog
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  dm:
+    build: ./deviceMonitor   # path to your adaptor Dockerfile
+    container_name: dev_mon
+    networks:
+      - iot
+    depends_on:
+      - catalog
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  health_con2:
+    build: ./healthConnector2   # path to your adaptor Dockerfile
+    container_name: health_con2
+    networks:
+      - iot
+    depends_on:
+      - catalog
+    environment:
+      - PYTHONUNBUFFERED=1
+
+  house_con2:
+    build: ./houseConnector2   # path to your adaptor Dockerfile
+    container_name: house_con2
+    networks:
+      - iot
+    depends_on:
+      - catalog
+    environment:
+      - PYTHONUNBUFFERED=1
+
+networks:
+  iot:
+    driver: bridge
+

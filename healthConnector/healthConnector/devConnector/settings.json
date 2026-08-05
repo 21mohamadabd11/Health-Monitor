@@ -1,0 +1,21 @@
+{
+    "catalogURL": "http://catalog:8080",
+    "deviceInfo": {
+        "id": "1",
+        "IP": "health_con",
+        "port": 6060,
+        "location": "torino",
+        "active": 0,
+        "type": "health",
+        "available": [
+            "spo2",
+            "hr"
+        ],
+        "last_update": 1758982304.9379764
+    },
+    "mqtt_data": {
+        "broker": "broker.hivemq.com",
+        "port": 1883,
+        "mqtt_topic_publish": "poli/IoTProject/sensors"
+    }
+}

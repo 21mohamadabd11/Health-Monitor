@@ -1,0 +1,10 @@
+{
+    "catalogURL": "http://catalog:8080",
+    "removeInterval": 10,
+    "removeThreshold": 60,
+    "serviceInfo": {
+        "id": 1,
+        "serviceName": "DeviceMonitor",
+        "last_update": ""
+    }
+}

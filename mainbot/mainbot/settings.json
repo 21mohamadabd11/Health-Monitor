@@ -1,0 +1,10 @@
+{
+    "catalogURL": "http://catalog:8080",
+    "serviceInfo": {
+        "id": 3,
+        "serviceName": "Telegram_Bot",
+        "last_update": "",
+        "pbot_token": "8012715662:AAHaSa2-8gordFNA-GL9xERkx-swsvC_5j4",
+        "dbot_token": "7516687380:AAHItb6UAjK0oZkRLc6v8-Wk8z4yK2CPzjM"
+    }
+}

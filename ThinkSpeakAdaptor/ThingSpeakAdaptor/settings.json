@@ -1,0 +1,14 @@
+{
+    "catalogURL": "http://catalog:8080",
+    "ThingspeakURL": "https://api.thingspeak.com",
+    "UserAPIKey": "9JUIV2CW654ZSUQM",
+    "brokerIP": "broker.hivemq.com",
+    "brokerPort": 1883,
+    "mqttTopic":"poli/IoTProject/sensors",
+    "serviceInfo": {
+        "id": 4,
+        "serviceName": "ThingspeakAdaptor",
+        "url": "http://tsa:9091",
+        "last_update": ""
+    }
+}
